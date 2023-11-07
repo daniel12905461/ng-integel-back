@@ -36,5 +36,25 @@ class DatabaseSeeder extends Seeder
         // $user->password = Hash::make('admin');
         // $user->remember_token = Str::random(10);
         // $user->save();
+
+        \App\Models\Zona::factory()->create([
+            'nombre' => 'Otro'
+        ]);
+        \App\Models\Zona::factory()->create([
+            'nombre' => 'Quillacollo'
+        ]);
+        \App\Models\Zona::factory()->create([
+            'nombre' => 'Zofraco'
+        ]);
+
+        
+        \App\Models\PlanInternet::factory()->create([
+            'nombre' => 'Fibra10Mb/s',
+            'precio' => '100'
+        ]);
+        \App\Models\PlanInternet::factory()->create([
+            'nombre' => 'Mantenimiento',
+            'precio' => '0'
+        ]);
     }
 }
